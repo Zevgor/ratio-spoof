@@ -1,11 +1,11 @@
-# ratio-spoofer
-ratio spoofer is a tool to spoof the download/upload amount on private bittorrent trackers.
+# ratio-spoof
+ratio-spoof is a tool to spoof the download/upload amount on private bittorrent trackers.
 
 
-## How does it works
+## How does it work
 In the way that Bittorrent protcols work, the tracker itself can not measure how much a peer has uploaded or downloaded. Insterad, the peer is trusted to report (or anoounce) back how much it has uploaded or downloaded.
 
-Ratio-spoof acts like a normal bittorrent client but without downloading or uploading anything, it just spoofs to the tracker by announcing.
+ratio-spoof acts like a normal bittorrent client but without downloading or uploading anything, it just spoofs to the tracker by announcing.
 
 ## Usage
 
@@ -29,7 +29,6 @@ required arguments:
 [CLIENT_CODE] options: qbit-4.0.3, qbit-4.3.3
 ```
 
-```
 ./ratio-spoof -d 90% -ds 100kbps -u 0% -us 1024kbps -t (torrentfile_path) 
 ```
 * Will start "downloading" with the initial value of 90% of the torrent total size at 100 kbps speed until it reaches 100% mark.
@@ -41,10 +40,13 @@ required arguments:
 * Will start "downloading" with the initial value of 2gb downloaded  if possible at 500kbps speed until it reaches 100% mark.
 * Will start "uploading" with the initial value of 1gb uplodead at 1024kbps (aka 1mb/s) indefinitely.
 
-## Will i get caught using it ?
+Example Execution:
+![example execution](https://github.com/Zevgor/ratio-spoof/blob/main/assets/example.png)
+
+## Can you get caught cheating?
 It's possible to get caught cheating using this, depending on how sophisticated the measures your tracker takes. Use at your own discretion.
 
-## Bittorrent client supported 
+## Bittorrent Client 
 The default client emulation is qbittorrent v4.0.3, however you can change it by using the -c argument.
 
 ## Resources
